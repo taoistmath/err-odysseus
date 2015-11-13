@@ -1,0 +1,9 @@
+[Python]
+Version=2+
+
+[Core]
+Name = Odysseus
+Module = odysseus
+
+[Documentation]
+Description = I'll tell you about myself
