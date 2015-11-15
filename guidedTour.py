@@ -1,0 +1,62 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+from errbot import botcmd, BotPlugin
+
+__author__ = 'taoistmath'
+
+class GuidedTour(BotPlugin):
+
+    @botcmd
+    def tour(self, mess, args):
+        """ Starts the guided tour
+        Example: !tour
+        """
+        tour = "Welcome to the Guided Tour! For starters let me introduce you to the two types of commands I will accept: Slash commands and Bang Commands. Type ‘!slash’ to learn more about Slash Commands or ‘!bang’ to learn more about Bang Commands."
+
+        return tour
+
+    @botcmd
+    def slash(self, mess, args):
+        """ Tells you about using Slash commands
+        Example: !slash
+        """
+        slash = "Slash ‘\’ commands are HipChat Integration commands and are only available in chat rooms.  Create your own private chat room by clicking the New Chat button in the top bar and then clicking Create a new room. Once there, type ‘/sassy’ to what Sassy bot can do. Then type ‘/anim you’re awesome’ because well…you’re awesome!"
+
+        return slash
+
+    @botcmd
+    def bang(self, mess, args):
+        """ Tells you about using Bang commands
+        Example: !bang
+        """
+        bang = "Bang ‘!’ commands are Odysseus Bot commands and are available when chatting with me directly or in any room in which I am a member.  You can also type 'Odysseus' in place of the '!' if you'd like to be more formal. Type ‘!status’ to see a list of all the plugins that are available. Type ‘Odysseus, help <Plugin_name>’ to see what each plugin can do. When you’re done exploring type ‘!continue tour’."
+
+        return bang
+
+    @botcmd
+    def continue_tour(self, mess, args):
+        """ List of available bot commands
+        Example: !available commands
+        """
+        continue_tour = "Welcome back to the tour! Now that you know how to interact with the different types of bots let’s take a look at the resources that I can provide. Type ‘!human resources’ to see available links related to HR and Benefits. If you’re an Engineer type ‘!NewDevSetup’ to start configuring your machine."
+
+        return continue_tour
+
+    @botcmd
+    def human_resources(self, mess, args):
+        """ List of Human Resources references
+        Example: !human resources
+        """
+        human_resources = "There is nothing here yet, sorry :(. If you have suggestion on what to put here, hit up the Ithica chat room and let me know."
+
+        return human_resources
+
+    @botcmd
+    def newdevsetup(self, mess, args):
+        """ List of New Dev references
+        Example: !newdevsetup
+        """
+        newdevsetup = "Welcome to the team! First things last, we have to finalize getting your machine set up. Log into Jira and visit our setup page: https://dunandb.jira.com/wiki/display/AUTOTEST/New+New+Developer+Documentation"
+
+        return newdevsetup

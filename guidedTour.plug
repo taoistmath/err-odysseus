@@ -1,0 +1,9 @@
+[Python]
+Version=2+
+
+[Core]
+Name = GuidedTour
+Module = guidedTour
+
+[Documentation]
+Description = Guided tour to help you navigate ChatOps and company onboarding
