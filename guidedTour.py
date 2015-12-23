@@ -48,9 +48,15 @@ class GuidedTour(BotPlugin):
         """ List of Human Resources references
         Example: !human resources
         """
-        human_resources = "There is nothing here yet, sorry :(. If you have suggestion on what to put here, hit up the Ithica chat room and let me know."
-
-        return human_resources
+        return_list = ''
+        
+        human_resources = [
+        'Fidelity Benefits: https://nb.fidelity.com/public/nb/dnb/home',
+        '#',
+        ]
+        for resource in human_resources:
+            return_list = return_list + resource + '\n'
+        return return_list
 
     @botcmd
     def newdevsetup(self, mess, args):
